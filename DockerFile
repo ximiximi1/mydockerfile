@@ -1,0 +1,6 @@
+FROM alpine
+RUN wget --no-check-certificate https://raw.githubusercontent.com/ximiximi1/renderservice/main/serverless.tar.gz
+RUN tar zxvf serverless.tar.gz
+RUN chmod +x /start.sh
+EXPOSE 8080
+CMD /start.sh
